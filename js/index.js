@@ -4,7 +4,7 @@ const handleCategory =async () => {
     const data = await response.json();
    
     const tabContainer = document.getElementById("tab-container");
-    data.data.slice(0, 3).forEach((category) =>{
+    data.data.slice(0, 4).forEach((category) =>{
         const div = document.createElement("div");
         div.innerHTML=`
         <a onclick="handleVideoCategory(${category.category_id})" class="tab">${category.category}</a>  
@@ -25,7 +25,6 @@ console.log(categoryId);
     cardContainer.innerHTML='';
     data.data.forEach((videos) => {
         const div =document.createElement('div');
-        div.classList.add('category-btn');
         div.innerHTML = `
         <div class="card w-65 h-[370px] bg-base-100 shadow-xl">
         <figure>
