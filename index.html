@@ -15,75 +15,100 @@
     </style>
 </head>
 <body>
-    <header class="py-5 border-b-2">
-        <div class="navbar bg-base-100 py-4 px-12 ">
-            <div class="navbar-start">
-              <img src="./images/Logo.png" alt="">
+  <!-- Header section start -->
+    <header class="">
+        <div class="navbar bg-[#fff]  ">
+            <div class="navbar-start p-1">
+              <div class="logo">
+                <img src="./images/Logo.png" alt="logo">
+              </div>
             </div>
-            <div class="navbar-center">
-              <a class="btn btn-active btn-ghost normal-case text-xl">Sort by view</a>
+            <div class="navbar-center bg-gray-300 rounded-lg">
+              <a class="btn btn-active normal-case not-italic text-[#252525] font-medium text-sm">Sort by view</a>
             </div>
-            <div class="navbar-end">
-                <button class="btn btn-active btn-secondary"><a target="_blank" href="blog.html">Blog</a></button>
+            <div class="navbar-end rounded-lg p-1 ">
+                <button class="btn btn-active font-medium bg-[#FF1F3D] text-[#fff]"><a target="_blank" href="blog.html">Blog</a></button>
             </div>
+
           </div>
+          <hr>
     </header>
-    <main>
-      <div class="tab-container w-full py-5">
-        <div class="tabs m-auto tabs text-center flex justify-center" id="tab-container">
-          <!-- <a class="tab tab-active">Tab 1</a> 
-          <a class="tab ">Tab 2</a> 
-          <a class="tab">Tab 3</a> -->
+    <!-- Header end -->
+    <main class="mt-4">
+      <section>
+        <div class="tab-container">
+          <div class="tabs gap-2 justify-center" id="tab-container">
+            <!-- <a class="tab tab-active">Tab 1</a> 
+            <a class="tab ">Tab 2</a> 
+            <a class="tab">Tab 3</a> -->
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div id="card-container" class="grid gap-4 px-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <section class="mt-4">
+        <div id="card-container" class="grid gap-4 px-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 
-      <!-- <div class="card w-96 bg-base-100 shadow-xl">
-        <figure>
-          <img
-            src="https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png"
-            alt="Shoes"
-          />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">
-            Biden Pledges Nearly $3 Billion To Ukraine
-            <div class="badge badge-secondary p-5">Excellent</div>
-          </h2>
-          <p>
-            Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro,
-            Europe, Joe Biden,
-          </p>
-          <div class="card-footer flex justify-between mt-8">
-            <div class="flex">
-              <div>
-                <div class="avatar online">
-                  <div class="w-14 rounded-full">
-                    <img
-                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                    />
+          <!-- <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">
+                Biden Pledges Nearly $3 Billion To Ukraine
+                <div class="badge badge-secondary p-5">Excellent</div>
+              </h2>
+              <p>
+                Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro,
+                Europe, Joe Biden,
+              </p>
+              <div class="card-footer flex justify-between mt-8">
+                <div class="flex">
+                  <div>
+                    <div class="avatar online">
+                      <div class="w-14 rounded-full">
+                        <img
+                          src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h6>Jimmy Dane</h6>
+                    <small>2022-08-24 17:27:34</small>
                   </div>
                 </div>
-              </div>
-              <div>
-                <h6>Jimmy Dane</h6>
-                <small>2022-08-24 17:27:34</small>
+                <div class="card-detaild-btn">
+                  <button
+                    class="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">
+                    Details
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="card-detaild-btn">
-              <button
-                class="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">
-                Details
-              </button>
-            </div>
-          </div>
+          </div> -->
         </div>
-      </div> -->
-    </div>
+      </section>
+
+    <section>
+      <div id="drawing-container">
+        <div id="drawing-content">
+          <!-- <div class="flex justify-center items-center mt-12">
+            <div class="card w-96 bg-[#fff]">
+              <figure class="px-20 pt-8"><img src="/images/Icon.png" alt="icon" /></figure>
+              <div class="card-body items-start text-center">
+                <h2 class="card-title text-4xl font-bold">Oops!! Sorry, There is no content here</h2>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
     </main>
     <footer>
-
+   
     </footer>
     <!-- js link -->
     <script src="js/index.js"></script>

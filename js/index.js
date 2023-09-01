@@ -19,11 +19,31 @@ const handleVideoCategory =async (categoryId) => {
 console.log(categoryId);
     const response =await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
     const data =await response.json();
-    console.log(data.data)
+    const drawingContainer = document.getElementById('drawing-container');
+    const drawingContent =document.getElementById('drawing-content');
+    drawingContainer.innerHTML = '';
+
+    const drawingData = data.data;
+
+    if(drawingData.length === 0){
+      const div = document.createElement('div');
+      div.innerHTML= `
+      <div class="flex justify-center items-center mt-12">
+            <div class="card w-96 bg-[#fff]">
+              <figure class="px-20 pt-8"><img src="/images/Icon.png" alt="icon" /></figure>
+              <div class="card-body items-start text-center">
+                <h2 class="card-title text-2xl font-bold">Oops!! Sorry, There is no content here</h2>
+              </div>
+            </div>
+          </div>
+      `;
+      drawingContainer.appendChild(div);
+    }
+
 
     const cardContainer = document.getElementById('card-container');
     cardContainer.innerHTML='';
-    data.data.forEach((videos) => {
+    const videoCategory = data.data.forEach((videos) => {
         const div =document.createElement('div');
         div.innerHTML = `
         <div class="card w-65 h-[370px] bg-base-100 shadow-xl">
@@ -43,7 +63,8 @@ console.log(categoryId);
                 <div class="avatar online">
                   <div class="w-14 rounded-full">
                     <img
-                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+                    src=${videos.authors[0].profile_picture
+                    }"
                     />
                     />
                   </div>
@@ -51,9 +72,8 @@ console.log(categoryId);
               </div>
               <div>
                 <h6>${videos.authors[0].profile_name}</h6>
+                <span>${videos.authors[0].verified ? '<img src="images/Group 3.png" alt="">' :' '}</span>
                 <h6>${videos.others.views}</h6>
-                
-                <small>2022-08-24 17:27:34</small>
               </div>
             </div>
           </div>
