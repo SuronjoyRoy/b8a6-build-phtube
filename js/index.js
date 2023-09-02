@@ -38,7 +38,26 @@ console.log(categoryId);
           </div>
       `;
       drawingContainer.appendChild(div);
+
     }
+
+    const timeZone = (second) => {
+
+      const timeHours = Math.floor(second/3600);
+      const secondTime = Math.floor(second%3600);
+      const minTime = Math.floor(secondTime/60);
+      let resultTime = '';
+      if(timeHours > 0){
+        resultTime +=`${timeHours} hr ${timeHours > 1 ? 's' : ''}`;
+      };
+
+      if(minTime > 0){
+        resultTime +=`${minTime} hr ${minTime > 1 ? 's' : ''}`};
+        resultTime += ' ago';
+        return resultTime;
+    }
+
+
 
 
     const cardContainer = document.getElementById('card-container');
@@ -48,10 +67,14 @@ console.log(categoryId);
         div.innerHTML = `
         <div class="card w-65 h-[370px] bg-base-100 shadow-xl">
         <figure>
+          <div class="relative">
           <img
-            src="${videos.thumbnail}"
-            alt="Shoes"
-          />
+          src="${videos.thumbnail}"
+          alt="Shoes"/>
+          </div>
+          <div class="absolute top-[145px] right-5">
+          <p>${videos?.others?.posted_date? `<div class="bg-black text-white">${timeZone(videos.others.posted_date)}</div>`:''}</p>
+          </div>
         </figure>
         <div class="card-body">
           <h2 class="card-title">
